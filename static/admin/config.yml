@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  repo: calpoly-lib/gatsby-artcollection
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: pages
+    label: Pages
+    folder: content/pages
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+  - name: partials
+    label: Partials
+    folder: content/partials
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
+  - name: posts
+    label: Posts
+    folder: content/posts
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
