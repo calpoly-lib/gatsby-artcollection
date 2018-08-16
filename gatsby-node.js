@@ -11,11 +11,19 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === 'MarkdownRemark') {
     const slug = createFilePath({ node, getNode, basePath: 'pages' })
-    createNodeField({
-      node,
-      name: 'slug',
-      value: slug,
-    })
+    if (/catalog\/entries/.test(node.fileAbsolutePath)) {
+      createNodeField({
+        node,
+        name: 'slug',
+        value: `/catalog${slug}`,
+      })
+    } else {
+      createNodeField({
+        node,
+        name: 'slug',
+        value: slug,
+      })
+    }
   }
 }
 
@@ -24,10 +32,11 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     const contentPageTemplate = path.resolve(`./src/templates/content-page.js`);
     const contentPostTemplate = path.resolve(`./src/templates/content-post.js`);
+    const catalogEntryTemplate = path.resolve(`./src/templates/catalog-entry.js`);
     graphql(`
       {
         allMarkdownRemark(
-          filter: { fileAbsolutePath: { regex: "/content\/pages/|content\/posts/" } }
+          filter: { fileAbsolutePath: { regex: "/content\/pages/|content\/posts|catalog\/entries/" } }
         ) {
           edges {
             node {
@@ -61,6 +70,19 @@ exports.createPages = ({ graphql, actions }) => {
         createPage({
           path: slug,
           component: contentPostTemplate,
+          context: {
+            slug,
+          },
+        })
+      })
+
+      // Create catalog entries
+      const catalogEntries = items.filter(item => /catalog\/entries/.test(item.node.fileAbsolutePath));
+      catalogEntries.forEach(({ node }) => {
+        const slug = node.fields.slug;
+        createPage({
+          path: slug,
+          component: catalogEntryTemplate,
           context: {
             slug,
           },
