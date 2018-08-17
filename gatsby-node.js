@@ -6,6 +6,7 @@
 
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
+const _ = require('lodash')
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -33,6 +34,7 @@ exports.createPages = ({ graphql, actions }) => {
     const contentPageTemplate = path.resolve(`./src/templates/content-page.js`);
     const contentPostTemplate = path.resolve(`./src/templates/content-post.js`);
     const catalogEntryTemplate = path.resolve(`./src/templates/catalog-entry.js`);
+    const collectionTemplate = path.resolve("src/templates/collections.js")
     graphql(`
       {
         allMarkdownRemark(
@@ -40,6 +42,9 @@ exports.createPages = ({ graphql, actions }) => {
         ) {
           edges {
             node {
+              frontmatter {
+                collection
+              }
               fileAbsolutePath
               fields {
                 slug
@@ -77,8 +82,14 @@ exports.createPages = ({ graphql, actions }) => {
       })
 
       // Create catalog entries
+      // Collection pages:
+      let collections = []
       const catalogEntries = items.filter(item => /catalog\/entries/.test(item.node.fileAbsolutePath));
       catalogEntries.forEach(({ node }) => {
+        const collection = node.frontmatter.collection
+        if (!collections.includes(collection)) {
+          collections.push(node.frontmatter.collection)
+        }
         const slug = node.fields.slug;
         createPage({
           path: slug,
@@ -89,6 +100,17 @@ exports.createPages = ({ graphql, actions }) => {
         })
       })
 
+      // Make collection pages
+      collections.forEach(collection => {
+        createPage({
+          path: `/collections/${_.kebabCase(collection)}/`,
+          component: collectionTemplate,
+          context: {
+            collection,
+          },
+        })
+      })
+      
       resolve()
     })
   })

@@ -5,6 +5,7 @@ import rehypeReact from "rehype-react"
 import Layout from "../components/layout"
 import ListPosts from "../components/list-posts"
 import Partial from "../components/partial"
+import Collections from "../components/collections"
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -13,7 +14,8 @@ export default ({ data }) => {
     components: {
       "g-link": Link,
       "ac-list-posts": ListPosts,
-      "ac-partial": Partial
+      "ac-partial": Partial,
+      "ac-collections": Collections
     },
   }).Compiler;
   return (
