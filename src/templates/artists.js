@@ -4,16 +4,16 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 
-const Collections = ({ pageContext, data }) => {
-  const { collection } = pageContext
+const Artists = ({ pageContext, data }) => {
+  const { artist } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
-  const collectionHeader = `${totalCount} ${
+  const artistHeader = `${totalCount} ${
     totalCount === 1 ? "entry" : "entries"
-  } in "${collection}"`
+  } in "${artist}"`
 
   return (
     <Layout>
-      <h1>{collectionHeader}</h1>
+      <h1>{artistHeader}</h1>
       <ul>
         {edges.map(({ node }) => {
           const { path, title } = node.frontmatter
@@ -24,19 +24,19 @@ const Collections = ({ pageContext, data }) => {
           )
         })}
       </ul>
-      <Link to="/collections">All collections</Link>
+      <Link to="/artists">All artists</Link>
     </Layout>
   )
 }
 
-export default Collections
+export default Artists
 
 export const pageQuery = graphql`
-  query($collection: String) {
+  query($artist: String) {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___title], order: ASC }
-      filter: { frontmatter: { collection: { in: [$collection] } } }
+      filter: { frontmatter: { artist: { in: [$artist] } } }
     ) {
       totalCount
       edges {

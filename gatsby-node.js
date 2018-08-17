@@ -35,6 +35,9 @@ exports.createPages = ({ graphql, actions }) => {
     const contentPostTemplate = path.resolve(`./src/templates/content-post.js`);
     const catalogEntryTemplate = path.resolve(`./src/templates/catalog-entry.js`);
     const collectionTemplate = path.resolve("src/templates/collections.js")
+    const artistTemplate = path.resolve("src/templates/artists.js")
+    const typeTemplate = path.resolve("src/templates/types.js")
+    const mediumTemplate = path.resolve("src/templates/media.js")
     graphql(`
       {
         allMarkdownRemark(
@@ -43,7 +46,10 @@ exports.createPages = ({ graphql, actions }) => {
           edges {
             node {
               frontmatter {
-                collection
+                collection,
+                artist,
+                type,
+                medium
               }
               fileAbsolutePath
               fields {
@@ -84,11 +90,26 @@ exports.createPages = ({ graphql, actions }) => {
       // Create catalog entries
       // Collection pages:
       let collections = []
+      let artists = []
+      let types = []
+      let media = []
       const catalogEntries = items.filter(item => /catalog\/entries/.test(item.node.fileAbsolutePath));
       catalogEntries.forEach(({ node }) => {
         const collection = node.frontmatter.collection
         if (!collections.includes(collection)) {
           collections.push(node.frontmatter.collection)
+        }
+        const artist = node.frontmatter.artist
+        if (!artists.includes(artist)) {
+          artists.push(node.frontmatter.artist)
+        }
+        const type = node.frontmatter.type
+        if (!types.includes(type)) {
+          types.push(node.frontmatter.type)
+        }
+        const medium = node.frontmatter.medium
+        if (!media.includes(medium)) {
+          media.push(node.frontmatter.medium)
         }
         const slug = node.fields.slug;
         createPage({
@@ -107,6 +128,39 @@ exports.createPages = ({ graphql, actions }) => {
           component: collectionTemplate,
           context: {
             collection,
+          },
+        })
+      })
+      
+      // Make artist pages
+      artists.forEach(artist => {
+        createPage({
+          path: `/artists/${_.kebabCase(artist)}/`,
+          component: artistTemplate,
+          context: {
+            artist,
+          },
+        })
+      })
+      
+      // Make type pages
+      types.forEach(type => {
+        createPage({
+          path: `/types/${_.kebabCase(type)}/`,
+          component: typeTemplate,
+          context: {
+            type,
+          },
+        })
+      })
+      
+      // Make medium pages
+      media.forEach(medium => {
+        createPage({
+          path: `/media/${_.kebabCase(medium)}/`,
+          component: mediumTemplate,
+          context: {
+            medium,
           },
         })
       })
