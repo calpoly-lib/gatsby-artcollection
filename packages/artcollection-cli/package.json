@@ -1,0 +1,36 @@
+{
+  "name": "artcollection-cli",
+  "description": "Artcollection command line interface",
+  "version": "0.0.1",
+  "author": "Carl W. Hunt <cwhunt@litlog.io>",
+  "bin": {
+    "artcollection": "lib/artcollection.js"
+  },
+  "bugs": {
+    "url": "https://github.com/calpoly-lib/gatsby-artcollection/issues"
+  },
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://github.com/calpoly-lib/gatsby-artcollection/tree/master/packages/artcollection-cli#readme",
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "lib/artcollection.js",
+  "repository": "https://github.com/calpoly-lib/gatsby-artcollection/tree/master/packages/artcollection-cli",
+  "scripts": {
+    "build": "babel src --out-dir lib --ignore **/__tests__",
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "watch": "babel -w src --out-dir lib --ignore **/__tests__"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "cross-env": "^5.2.0"
+  },
+  "dependencies": {
+    "commander": "^2.15.1",
+    "fs-extra": "^6.0.1"
+  }
+}
