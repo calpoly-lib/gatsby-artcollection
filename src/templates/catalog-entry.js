@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import rehypeReact from "rehype-react"
 
 import Layout from "../components/layout"
+import Gallery from "../components/gallery"
 
 export default ({ data }) => {
   const entry = data.markdownRemark
@@ -16,6 +17,7 @@ export default ({ data }) => {
         {
           renderAst(entry.htmlAst)
         }
+        <Gallery images={entry.frontmatter.figure} />
       </div>
     </Layout>
   )
@@ -26,7 +28,26 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       htmlAst
       frontmatter {
+        id
         title
+        collection
+        artist
+        type
+        medium
+        date
+        figure {
+          id
+          file {
+            publicURL
+            childImageSharp {
+              resize(width: 200) {
+                src
+              }
+            }
+          }
+          caption
+          credit
+        }
       }
     }
   }
