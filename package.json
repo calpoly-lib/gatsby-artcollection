@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "author": "Carl W. Hunt <cwhunt@litlog.io>",
   "dependencies": {
+    "@appbaseio/reactivesearch": "^2.8.0",
     "gatsby": "next",
     "gatsby-cli": "^2.0.0-beta.12",
     "gatsby-image": "^1.0.55",
