@@ -4,8 +4,9 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
-import "prismjs/themes/prism-okaidia.css"
+import Search from './search'
 import './layout.css'
+import './application.css'
 
 const Layout = ({ children, data }) => (
   <StaticQuery
@@ -27,16 +28,27 @@ const Layout = ({ children, data }) => (
             { name: 'keywords', content: 'sample, something' },
           ]}
         />
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
-          {children}
+        <div id="center">
+          <div class="wrapper">
+            <Header siteTitle={data.site.siteMetadata.title} />
+            <div id="sidebar" class="col-md-3 col-sm-4">
+              <div id="facets" class="facets sidenav">
+                <Search classNames={'link_bold'}/>
+              </div>
+            </div>
+            <div id="content" class="col-md-9 col-sm-8">
+              <div id="home">
+                {children}
+              </div>
+
+            </div>
+          </div>
+          <footer>
+            <p>
+              <a href="http://lib.calpoly.edu" target="_blank">Robert E. Kennedy Library</a> |
+              <a href="http://www.calpoly.edu" target="_blank">California Polytechnic State University</a> | 1 Grand Ave, San Luis Obispo, CA 93407 |
+              <a href="mailto:lib-artcollection@calpoly.edu">lib-artcollection@calpoly.edu</a> | (805) 756-6395</p>
+          </footer>            
         </div>
       </>
     )}

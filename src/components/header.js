@@ -1,33 +1,33 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
+import './layout.css'
+import './application.css'
 
-export default Header
+export default ({ siteTitle }) => (
+  <>
+    <div id="logo">
+      <a href="http://www.calpoly.edu">
+        <img src="http://artcollection.calpoly.edu/assets/calpoly-6800f79f94a0ec949716357add65415fcc1033bba77ef3013b4671cbcc9de22e.jpg" />
+      </a>
+      <Link id="title" to="/">{siteTitle}</Link>
+    </div>
+    <ul class="navbar">
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/about/">About</Link>
+      </li>
+      <li>
+        <Link to="/policies/">Policies</Link>
+      </li>
+      <li>
+        <Link to="/class_visits/">Class Visits</Link>
+      </li>
+      <li>
+        <Link to="/rfp/">Request for Proposals</Link>
+      </li>
+    </ul>
+  </>
+)
