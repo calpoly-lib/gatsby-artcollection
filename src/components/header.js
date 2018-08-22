@@ -8,7 +8,7 @@ export default ({ siteTitle }) => (
   <>
     <div id="logo">
       <a href="http://www.calpoly.edu">
-        <img src="http://artcollection.calpoly.edu/assets/calpoly-6800f79f94a0ec949716357add65415fcc1033bba77ef3013b4671cbcc9de22e.jpg" />
+        <img src="http://artcollection.calpoly.edu/assets/calpoly-6800f79f94a0ec949716357add65415fcc1033bba77ef3013b4671cbcc9de22e.jpg" alt="Cal Poly logo" />
       </a>
       <Link id="title" to="/">{siteTitle}</Link>
     </div>
