@@ -47,5 +47,7 @@ The public frontend web-based catalog <a href='http://artcollection.calpoly.edu/
 <i>Web development: Sean Gonzales, CS '18</i>
 
 For questions and helpful conversations about your proposal please contact:
-
-{{< q-contact >}}
+<br />
+<b>Catherine J. Trujillo</b>, Curator<br />
+<a href='mailto:lib-artcollection@calpoly.edu'>lib-artcollection@calpoly.edu</a><br />
+(805) 756-6395
