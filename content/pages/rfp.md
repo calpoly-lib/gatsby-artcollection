@@ -18,4 +18,4 @@ title: University Public Art RFP Opportunities
 
 <p>Application Deadline: February 24, 2017 •&nbsp;5:00 p.m. PST</p>
 
-<li>Link: <a href="CalPolyBakerCenter_Mural_RFP_2017.pdf">RFP 2017</a></li>
+<li>Link: <a href="/assets/CalPolyBakerCenter_Mural_RFP_2017.pdf">RFP 2017</a></li>

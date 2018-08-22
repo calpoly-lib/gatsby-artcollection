@@ -33,13 +33,7 @@ module.exports = {
         path: `${__dirname}/catalog/entries`,
       },
     },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: ["gatsby-remark-copy-linked-files"],
-      },
-    },
-    'gatsby-remark-copy-linked-files',
+    'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
