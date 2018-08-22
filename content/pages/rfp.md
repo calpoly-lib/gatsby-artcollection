@@ -1,9 +1,8 @@
 ---
 path: rfp
+date: 2018-08-22T22:18:54.724Z
 title: University Public Art RFP Opportunities
 ---
-<h2>University Public Art RFP Opportunities</h2>
-
 <p>There are no current open RFPs. Please check back.</p>
 
 <hr style="border: none; background: #000; height: 1px;">
