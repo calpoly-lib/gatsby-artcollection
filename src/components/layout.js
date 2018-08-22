@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import { Link, StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import Search from './search'
@@ -34,6 +34,12 @@ const Layout = ({ children, data }) => (
             <div id="sidebar" class="col-md-3 col-sm-4">
               <div id="facets" class="facets sidenav">
                 <Search classNames={'link_bold'}/>
+                <ul>
+                  <li><Link to="/collections/">Collections</Link></li>
+                  <li><Link to="/artists/">Artists</Link></li>
+                  <li><Link to="/types/">Types</Link></li>
+                  <li><Link to="/media/">Media</Link></li>             
+                </ul>
               </div>
             </div>
             <div id="content" class="col-md-9 col-sm-8">
