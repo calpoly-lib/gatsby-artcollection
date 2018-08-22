@@ -45,8 +45,8 @@ const Layout = ({ children, data }) => (
           </div>
           <footer>
             <p>
-              <a href="http://lib.calpoly.edu" target="_blank">Robert E. Kennedy Library</a> |
-              <a href="http://www.calpoly.edu" target="_blank">California Polytechnic State University</a> | 1 Grand Ave, San Luis Obispo, CA 93407 |
+              <a href="http://lib.calpoly.edu" target="_blank" rel="noopener noreferrer">Robert E. Kennedy Library</a> |
+              <a href="http://www.calpoly.edu" target="_blank" rel="noopener noreferrer">California Polytechnic State University</a> | 1 Grand Ave, San Luis Obispo, CA 93407 |
               <a href="mailto:lib-artcollection@calpoly.edu">lib-artcollection@calpoly.edu</a> | (805) 756-6395</p>
           </footer>            
         </div>
