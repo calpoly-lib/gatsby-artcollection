@@ -1,49 +1,44 @@
-import React, { Component } from 'react'
+import React from 'react';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Link } from 'gatsby'
-import Modal from "react-modal"
 
-class Browse extends Component {
-  constructor () {
-    super();
+class Search extends React.Component {
+  constructor(props) {
+    super(props);
     this.state = {
-      showModal: false
-      };
-    
-    this.handleOpenModal = this.handleOpenModal.bind(this);
-    this.handleCloseModal = this.handleCloseModal.bind(this);
+      modal: false
+    };
+
+    this.toggle = this.toggle.bind(this);
   }
 
-  handleOpenModal () {
-    this.setState({ showModal: true });
-  }
-  
-  handleCloseModal () {
-    this.setState({ showModal: false });
-  }
-
-  componentDidMount() {
-    Modal.setAppElement('body');
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
   }
 
   render() {
     return (
-      <>
-        <a onClick={this.handleOpenModal} href="#browse">Browse</a>
-        <Modal 
-           isOpen={this.state.showModal}
-           contentLabel="Browse"
-        >
-          <button onClick={this.handleCloseModal}>Close</button>
-          <ul>
-            <li><Link onClick={this.handleCloseModal} to="/collections/">Collections</Link></li>
-            <li><Link onClick={this.handleCloseModal} to="/artists/">Artists</Link></li>
-            <li><Link onClick={this.handleCloseModal} to="/types/">Types</Link></li>
-            <li><Link onClick={this.handleCloseModal} to="/media/">Media</Link></li>             
-          </ul>
+      <div>
+        <a onClick={this.toggle} href="#search" className={this.props.className}>Browse</a>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+          <ModalHeader toggle={this.toggle}>Browse</ModalHeader>
+          <ModalBody>
+            <ul>
+              <li><Link onClick={this.toggle} to="/collections/">Collections</Link></li>
+              <li><Link onClick={this.toggle} to="/artists/">Artists</Link></li>
+              <li><Link onClick={this.toggle} to="/types/">Types</Link></li>
+              <li><Link onClick={this.toggle} to="/media/">Media</Link></li>             
+            </ul>
+          </ModalBody>
+          <ModalFooter>
+            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+          </ModalFooter>
         </Modal>
-      </>
-    )
+      </div>
+    );
   }
 }
 
-export default Browse
+export default Search;
