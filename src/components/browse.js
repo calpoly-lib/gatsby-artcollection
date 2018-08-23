@@ -35,10 +35,10 @@ class Browse extends Component {
         >
           <button onClick={this.handleCloseModal}>Close</button>
           <ul>
-            <li><Link to="/collections/">Collections</Link></li>
-            <li><Link to="/artists/">Artists</Link></li>
-            <li><Link to="/types/">Types</Link></li>
-            <li><Link to="/media/">Media</Link></li>             
+            <li><Link onClick={this.handleCloseModal} to="/collections/">Collections</Link></li>
+            <li><Link onClick={this.handleCloseModal} to="/artists/">Artists</Link></li>
+            <li><Link onClick={this.handleCloseModal} to="/types/">Types</Link></li>
+            <li><Link onClick={this.handleCloseModal} to="/media/">Media</Link></li>             
           </ul>
         </Modal>
       </>
