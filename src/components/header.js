@@ -12,7 +12,7 @@ export default ({ siteTitle }) => (
       </a>
       <Link id="title" to="/">{siteTitle}</Link>
     </div>
-    <ul class="navbar">
+    <ul className="navbar">
       <li>
         <Link to="/">Home</Link>
       </li>

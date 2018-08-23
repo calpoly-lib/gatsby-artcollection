@@ -29,10 +29,10 @@ const Layout = ({ children, data }) => (
           ]}
         />
         <div id="center">
-          <div class="wrapper">
+          <div className="wrapper">
             <Header siteTitle={data.site.siteMetadata.title} />
-            <div id="sidebar" class="col-md-3 col-sm-4">
-              <div id="facets" class="facets sidenav">
+            <div id="sidebar" className="col-md-3 col-sm-4">
+              <div id="facets" className="facets sidenav">
                 <Search classNames={'link_bold'}/>
                 <ul>
                   <li><Link to="/collections/">Collections</Link></li>
@@ -42,7 +42,7 @@ const Layout = ({ children, data }) => (
                 </ul>
               </div>
             </div>
-            <div id="content" class="col-md-9 col-sm-8">
+            <div id="content" className="col-md-9 col-sm-8">
               <div id="home">
                 {children}
               </div>
