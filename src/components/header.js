@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import Browse from './browse'
+import Search from './search'
+
 import './layout.css'
 import './application.css'
 
@@ -27,6 +30,12 @@ export default ({ siteTitle }) => (
       </li>
       <li>
         <Link to="/rfp/">Request for Proposals</Link>
+      </li>
+      <li>
+        <Browse />
+      </li>
+      <li>
+        <Search />
       </li>
     </ul>
   </>
