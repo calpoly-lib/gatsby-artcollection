@@ -3,6 +3,7 @@ import React from "react"
 // Components
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import Gallery from "../components/gallery"
 
 const Collections = ({ pageContext, data }) => {
   const { collection } = pageContext
@@ -10,20 +11,22 @@ const Collections = ({ pageContext, data }) => {
   const collectionHeader = `${totalCount} ${
     totalCount === 1 ? "entry" : "entries"
   } in "${collection}"`
+  const images = edges.map(({ node }) => {
+    const { path, title, figure } = node.frontmatter
+    return {
+      id: figure[0].id,
+      fluid: figure[0].file.childImageSharp.fluid,
+      altText: title,
+      captionText: figure[0].caption,
+      captionHeader: title,
+      url: path
+    }
+  })
 
   return (
     <Layout>
-      <h1>{collectionHeader}</h1>
-      <ul>
-        {edges.map(({ node }) => {
-          const { path, title } = node.frontmatter
-          return (
-            <li key={path}>
-              <Link to={path}>{title}</Link>
-            </li>
-          )
-        })}
-      </ul>
+     <h2>{collectionHeader}</h2>
+      <Gallery images={images} />
       <Link to="/collections">All collections</Link>
     </Layout>
   )
@@ -44,6 +47,19 @@ export const pageQuery = graphql`
           frontmatter {
             title
             path
+            figure {
+              id
+              file {
+                publicURL
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }             
+                }
+              }
+              caption
+              credit
+            }
           }
         }
       }

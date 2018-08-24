@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Img from "gatsby-image";
+import { Link } from "gatsby"
+import Img from "gatsby-image"
 import {
   Carousel,
   CarouselItem,
@@ -14,14 +15,7 @@ class Gallery extends Component {
     this.state = { 
       activeIndex: 0
     };
-    this.items = props.images.map(image => {
-      return {
-        id: image.id,
-        fluid: image.file.childImageSharp.fluid,
-        altText: image.caption,
-        caption: image.caption
-      }
-    })    
+    this.items = props.images   
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
     this.goToIndex = this.goToIndex.bind(this);
@@ -54,9 +48,30 @@ class Gallery extends Component {
     this.setState({ activeIndex: newIndex });
   }
 
+  renderLink(item) {
+    if (/^\/static/.test(item.url)) {
+      return (
+        <a href={item.url} target="_blank" rel="noopener noreferrer">
+          <Img
+            alt={item.caption} 
+            fluid={item.fluid}
+          />
+        </a>
+      )
+    } else {
+      return (
+        <Link to={item.url}>
+          <Img
+            alt={item.caption} 
+            fluid={item.fluid}
+          />
+        </Link>
+      )
+    }
+  }
+
   render() {
     const { activeIndex } = this.state;
-
     const slides = this.items.map((item) => {
       return (
         <CarouselItem
@@ -64,11 +79,8 @@ class Gallery extends Component {
           onExited={this.onExited}
           key={item.id}
         >
-          <Img
-            alt={item.caption} 
-            fluid={item.fluid}
-          />
-          <CarouselCaption captionText={item.caption} />
+          {this.renderLink(item)}
+          <CarouselCaption captionText={item.captionText} captionHeader={item.captionHeader} />
         </CarouselItem>
       );
     });

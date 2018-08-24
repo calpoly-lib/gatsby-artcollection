@@ -8,6 +8,16 @@ import Gallery from "../components/gallery"
 
 export default ({ data }) => {
   const entry = data.markdownRemark
+  const images = entry.frontmatter.figure.map(figure => {
+    return {
+      id: figure.id,
+      fluid: figure.file.childImageSharp.fluid,
+      altText: figure.caption,
+      captionText: figure.caption,
+      captionHeader: '',
+      url: figure.file.publicURL
+    }
+  }) 
   const renderAst = new rehypeReact({
     createElement: React.createElement
   }).Compiler;
@@ -52,7 +62,7 @@ export default ({ data }) => {
             <dd className="ac-accession_display">{entry.frontmatter.id}</dd>
             <dt className="ac-img_original_display">Picture{entry.frontmatter.figure.length === 1 ? "" : "s"}:</dt>
             <dd className="ac-img_original_display">
-              <Gallery images={entry.frontmatter.figure} />
+              <Gallery images={images} />
             </dd>
           </dl>
         </div>
@@ -78,9 +88,6 @@ export const query = graphql`
           file {
             publicURL
             childImageSharp {
-              resize(width: 200) {
-                src
-              }
               fluid {
                 ...GatsbyImageSharpFluid
               }             
