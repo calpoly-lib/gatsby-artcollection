@@ -15,7 +15,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <h1>{post.frontmatter.title}</h1>
+        <h2>{post.frontmatter.title}</h2>
         {
           renderAst(post.htmlAst)
         }

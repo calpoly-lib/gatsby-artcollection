@@ -81,6 +81,9 @@ export const query = graphql`
               resize(width: 200) {
                 src
               }
+              fluid {
+                ...GatsbyImageSharpFluid
+              }             
             }
           }
           caption
