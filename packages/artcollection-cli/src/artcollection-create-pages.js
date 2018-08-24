@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
 const program = require('commander');
-const reindex = require("./reindex");
+const createPages = require("./create-pages");
 
 program.action(function () {
-  reindex();
+  createPages();
 });
 
 program.parse(process.argv);
