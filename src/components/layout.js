@@ -4,11 +4,12 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import { Container, Row, Col } from 'reactstrap';
 
-import Header from './header'
-import Footer from './footer'
+import Header from './header';
+import Footer from './footer';
+import BrowseSide from './browse-side';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-// import './layout.css'
+import './layout.css'
 // import './application.css'
 
 const Layout = ({ children, data }) => (
@@ -38,6 +39,9 @@ const Layout = ({ children, data }) => (
             </Col>
           </Row>
           <Row>
+            <Col xs="3">
+              <BrowseSide />
+            </Col>
             <Col>
               {children}
             </Col>
