@@ -7,7 +7,7 @@ import {
   Nav,
   NavItem } from 'reactstrap';
 
-import Browse from './browse'
+// import Browse from './browse'
 import Search from './search'
 
 export default class Header extends Component {
@@ -27,11 +27,13 @@ export default class Header extends Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
-          <a href="http://www.calpoly.edu">
+        <div id="title">
+          <a className="cp-logo" href="http://www.calpoly.edu">
             <img src="http://artcollection.calpoly.edu/assets/calpoly-6800f79f94a0ec949716357add65415fcc1033bba77ef3013b4671cbcc9de22e.jpg" alt="Cal Poly logo" height="25" />
           </a>
           <Link to="/" className="navbar-brand">University Art Collection</Link>
+        </div>
+        <Navbar color="light" light expand="md">
           <NavbarToggler onClick={this.toggle} className="mr-2" />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -46,9 +48,6 @@ export default class Header extends Component {
               </NavItem>
               <NavItem>
                 <Link to="/rfp/" className="nav-link">Request for Proposals</Link>
-              </NavItem>
-              <NavItem>
-                <Browse className="nav-link" />
               </NavItem>
               <NavItem>
                 <Search className="nav-link" />

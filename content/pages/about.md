@@ -44,7 +44,7 @@ In collaboration with Kennedy Library IT, campus curator Catherine Trujillo, and
 
 The public frontend web-based catalog <a href='http://artcollection.calpoly.edu/'>artcollection.calpoly.edu</a> is in beta and makes available for research and study select collections and records—in addition to sharing information regarding policies, procedures, and scheduled class visits. The public website is a custom integration of the open-source Blacklight discovery framework running on Ruby on Rails and the open-source CollectiveAccess collections management software running on PHP/MySQL.
 
-<i>Web development: Sean Gonzales, CS '18</i>
+<i>Web development: Sean Gonzales, CSC & MATH '19</i>
 
 For questions and helpful conversations about your proposal please contact:
 <br />
