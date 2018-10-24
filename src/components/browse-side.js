@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import { Link, StaticQuery, graphql } from "gatsby"
-import kebabCase from "lodash/kebabCase"
 import {
    Collapse,
    UncontrolledCollapse,
@@ -40,7 +38,8 @@ export default class BrowseSide extends Component {
    }
 
    toggleButton(name) {
-      this.state[name + "Open"] = !this.state[name + "Open"];
+      const key = name + "Open"
+      this.setState({ [key]: ![key]})
       this.forceUpdate();
    }
 
@@ -90,7 +89,7 @@ export default class BrowseSide extends Component {
                   </Nav>
                </Collapse>
             </Navbar>
-            <img src={require('../..//static/assets/ArtCollectionHeader.png')} />
+            <img src={require('../..//static/assets/ArtCollectionHeader.png')} alt="ArtCollection Header" />
          </div>
       );
    }
