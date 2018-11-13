@@ -37,14 +37,14 @@ const sanitize = (input) => {
 }
 
 module.exports = () => {
-  
+	const CA_HOSTNAME = process.env.CA_HOSTNAME
   const docs = readFile('ca_docs.json')
   for (let i = 0; i < docs.length; i++) {
     const doc = docs[i]
     if ('idno' in doc && (doc['status'] === "new" || doc['status'] === "completed")) {
       const originalUrl = doc['ca_object_representations.media.original'].replace(/<img src='(.+)' width='\d+' height='\d+'.*/g,"$1")
-      const original = doc['ca_object_representations.media.original'].replace(/<img src='http:\/\/artcollection.calpoly.edu\/media\/collectiveaccess\/images\/\d\/(.+)' width='\d+' height='\d+'.*/g,"$1")
-      // download(originalUrl, original)
+      const original = doc['ca_object_representations.media.original'].replace(/<img src='https:\/\/collectiveaccess.lib.calpoly.edu\/media\/collectiveaccess\/images\/\d\/(.+)' width='\d+' height='\d+'.*/g,"$1")
+      download(originalUrl, original)
       let page = {
         path: `/catalog/${doc['idno']}/`,
         id: doc['idno'],

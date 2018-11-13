@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const sanitize = (type, input) => {
 	if (type == "url") {
-		return input.replace(process.env.CA_HOSTNAME, process.env.AC_HOSTNAME)
+		return input
 	}
 	else if (type == "date") {
 		if (input == "created") {
@@ -64,6 +64,7 @@ const getCollectiveAccessObject = async (CA_SERVICE_API_USER, CA_SERVICE_API_KEY
 	try {
 		const url = `https://${CA_SERVICE_API_USER}:${CA_SERVICE_API_KEY}@${CA_HOSTNAME}/service.php/item/ca_objects/id/${id}`
 		// console.log('url', url)
+		console.log('id', id)
 		const options = {
 			headers: {
 				Accept: 'application/json',
@@ -175,7 +176,6 @@ module.exports = async () => {
   const CA_SERVICE_API_USER = process.env.CA_SERVICE_API_USER
 	const CA_SERVICE_API_KEY = process.env.CA_SERVICE_API_KEY
 	const CA_HOSTNAME = process.env.CA_HOSTNAME
-	const AC_HOSTNAME = process.env.AC_HOSTNAME
 
   try {
 		let items = []
