@@ -1,5 +1,6 @@
 ---
 path: about
+date: 2018-11-13T16:29:01.567Z
 title: About
 ---
 The newly revised and adopted University Art Acquisition and Oversight Policy (CAP 146, March 2015) is a campus guide for acquiring artwork, and demonstrates Cal Poly’s commitment to making its fine art collections available to students and faculty. The policy unifies the university’s collecting practices in support of making works of fine art accessible for teaching and research, and enriching the artistic cultures of both our campus and local communities.
@@ -42,9 +43,9 @@ The Legacy Collections have been acquired primarily through past donations, and 
 
 In collaboration with Kennedy Library IT, campus curator Catherine Trujillo, and with support from the Provost, the university art collection is managed using a web-based system called <a href='http://www.collectiveaccess.org/'>CollectiveAccess</a>—free open-source software for managing and publishing collections. (E.g., backend data management/entry to coordinate catalog entries, location, storage, and non-confidential administrative info).
 
-The public frontend web-based catalog <a href='http://artcollection.calpoly.edu/'>artcollection.calpoly.edu</a> is in beta and makes available for research and study select collections and records—in addition to sharing information regarding policies, procedures, and scheduled class visits. The public website is a custom integration of the open-source Blacklight discovery framework running on Ruby on Rails and the open-source CollectiveAccess collections management software running on PHP/MySQL.
+The public frontend web-based catalog <a href='http://artcollection.calpoly.edu/'>artcollection.calpoly.edu</a>  is in beta and makes available for research and study select collections and records—in addition to sharing information regarding policies, procedures, and scheduled class visits. The public website is a custom integration of the open-source Gatsby static PWA (Progressive Web App) generator running on JavaScript and the open-source CollectiveAccess collections management software running on PHP/MySQL.
 
-<i>Web development: Sean Gonzales, CSC & MATH '19</i>
+<i>Web development: Sean Gonzales, CSC & MATH '19</i> and <i> Carl Hunt</i> 
 
 For questions and helpful conversations about your proposal please contact:
 <br />
