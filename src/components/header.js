@@ -29,7 +29,7 @@ export default class Header extends Component {
       <div>
         <div id="title">
           <a className="cp-logo">
-            <img src="http://artcollection.calpoly.edu/assets/calpoly-6800f79f94a0ec949716357add65415fcc1033bba77ef3013b4671cbcc9de22e.jpg" alt="Cal Poly logo" height="25" />
+            <img src="/assets/calpoly.jpg" alt="Cal Poly logo" height="25" />
           </a>
           <Link to="/" className="navbar-brand">University Art Collection</Link>
         </div>
