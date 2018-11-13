@@ -28,7 +28,7 @@ export default class Header extends Component {
     return (
       <div>
         <div id="title">
-          <a className="cp-logo" href="http://www.calpoly.edu">
+          <a className="cp-logo">
             <img src="http://artcollection.calpoly.edu/assets/calpoly-6800f79f94a0ec949716357add65415fcc1033bba77ef3013b4671cbcc9de22e.jpg" alt="Cal Poly logo" height="25" />
           </a>
           <Link to="/" className="navbar-brand">University Art Collection</Link>
@@ -37,6 +37,9 @@ export default class Header extends Component {
           <NavbarToggler onClick={this.toggle} className="mr-2" />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+              <NavItem>
+                <Link to="/" className="nav-link">Home</Link>
+              </NavItem>
               <NavItem>
                 <Link to="/about/" className="nav-link">About</Link>
               </NavItem>
