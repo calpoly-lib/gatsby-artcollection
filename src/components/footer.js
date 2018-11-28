@@ -34,6 +34,9 @@ export default () => (
         <NavItem>
           <a className="nav-link py-1" href="https://accessibility.calpoly.edu/website-accessibility-statement" target="_blank" rel="noopener noreferrer">Website Accessibility Statement</a>
         </NavItem>
+        <NavItem>
+          <a className="nav-link py-1" href="https://www.calpoly.edu/privacy" target="_blank" rel="noopener noreferrer">Privacy Notice</a>
+        </NavItem>
       </Nav>
     </Navbar>
   </div>
