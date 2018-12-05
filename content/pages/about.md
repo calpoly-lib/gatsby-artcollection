@@ -53,4 +53,4 @@ For questions and helpful conversations about your proposal please contact:
 <a href='mailto:lib-artcollection@calpoly.edu'>lib-artcollection@calpoly.edu</a><br />
 (805) 756-6395
 
-**Cal Poly is in tiłhini, the Place of the Full Moon. We gratefully acknowledge, respect, and thank yak tityu tityu yak tiłhini, Northern Chumash Tribe of San Luis Obispo County and Region in whose homelands we are guests. **
+![Cal Poly is in tiłhini, the Place of the Full Moon. We gratefully acknowledge, respect, and thank yak tityu tityu yak tiłhini, Northern Chumash Tribe of San Luis Obispo County and Region in whose homelands we are guests. ](/assets/untitled-3.jpg)
