@@ -64,6 +64,10 @@ export default ({ data }) => {
             <dd className="ac-img_original_display">
               <Gallery images={images} />
             </dd>
+            <dt className="ac-credit">
+              Credit:
+            </dt>
+            <dd className="ac-credit">{entry.frontmatter.credit}</dd>
           </dl>
         </div>
       </div>
@@ -82,6 +86,7 @@ export const query = graphql`
         artist
         type
         medium
+        credit
         date
         figure {
           id
@@ -94,7 +99,6 @@ export const query = graphql`
             }
           }
           caption
-          credit
         }
       }
     }

@@ -53,12 +53,12 @@ module.exports = () => {
         artist: doc['ca_entities.related'],
         type: doc['type_id'],
         medium: doc['ca_objects.work_medium'],
+        credit: doc['ca_object_representations.credit_line'],
         figure: [
           {
             id: original.replace(/\.\w+$/, ''),
             file: `./${original}`,
-            caption: doc['ca_objects.work_description'].substring(0, 32),
-            credit: doc['ca_object_representations.credit_line']
+            caption: doc['ca_objects.work_description'].substring(0, 32)
           }
         ]
       }
@@ -70,11 +70,11 @@ collection: ${sanitize(page.collection)}
 artist: ${sanitize(page.artist)}
 type: ${page.type}
 medium: ${page.medium}
+credit: "${page.credit}"
 figure:
   - id: ${page.figure[0].id}
     file: "${page.figure[0].file}"
     caption: ${sanitize(page.figure[0].caption)}
-    credit: ${sanitize(page.figure[0].credit)}
 `
       let content = `---\n${frontmatter}---\n${doc['ca_objects.work_description']}\n`
       const fileName = `${doc['idno']}.md`
