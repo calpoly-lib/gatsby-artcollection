@@ -59,35 +59,32 @@ export default class BrowseSide extends Component {
             <p>Not sure what you are looking for? Browsing allows you to discover new content and gain a broader sense of what is contained in the collection.</p>
             
             <Navbar color="light" light expand="md">
-               <NavbarToggler onClick={this.toggle} className="mr-2" />
-               <Collapse isOpen={this.state.isOpen} navbar>
-                  <Nav className="ml-auto" navbar>
-                     <NavItem>
-                        <Button id="collections-toggler" onClick={() => this.toggleButton("collection")}>Collection <span className={this.getClassName("collection")}>›</span></Button>
-                        <UncontrolledCollapse className="browse-collapse" toggler="collections-toggler">
-                           <div className='browse-item-list'><Collections /></div>
-                        </UncontrolledCollapse>
-                     </NavItem>
-                     <NavItem>
-                        <Button id="artists-toggler" onClick={() => this.toggleButton("artist")}>Artist <span className={this.getClassName("artist")}>›</span></Button>
-                        <UncontrolledCollapse className="browse-collapse" toggler="artists-toggler">
-                           <div className='browse-item-list'><Artists /></div>
-                        </UncontrolledCollapse>
-                     </NavItem>
-                     <NavItem>
-                        <Button id="types-toggler" onClick={() => this.toggleButton("type")}>Type <span className={this.getClassName("type")}>›</span></Button>
-                        <UncontrolledCollapse className="browse-collapse" toggler="types-toggler">
-                           <div className='browse-item-list'><Types /></div>
-                        </UncontrolledCollapse>
-                     </NavItem>
-                     <NavItem>
-                        <Button id="media-toggler" onClick={() => this.toggleButton("medium")}>Medium <span className={this.getClassName("medium")}>›</span></Button>
-                        <UncontrolledCollapse className="browse-collapse" toggler="media-toggler">
-                           <div className='browse-item-list'><Media /></div>
-                        </UncontrolledCollapse>
-                     </NavItem>
-                  </Nav>
-               </Collapse>
+               <Nav className="ml-auto" navbar>
+                  <NavItem>
+                     <Button id="collections-toggler" onClick={() => this.toggleButton("collection")}>Collection <span className={this.getClassName("collection")}>›</span></Button>
+                     <UncontrolledCollapse className="browse-collapse" toggler="collections-toggler">
+                        <div className='browse-item-list'><Collections /></div>
+                     </UncontrolledCollapse>
+                  </NavItem>
+                  <NavItem>
+                     <Button id="artists-toggler" onClick={() => this.toggleButton("artist")}>Artist <span className={this.getClassName("artist")}>›</span></Button>
+                     <UncontrolledCollapse className="browse-collapse" toggler="artists-toggler">
+                        <div className='browse-item-list'><Artists /></div>
+                     </UncontrolledCollapse>
+                  </NavItem>
+                  <NavItem>
+                     <Button id="types-toggler" onClick={() => this.toggleButton("type")}>Type <span className={this.getClassName("type")}>›</span></Button>
+                     <UncontrolledCollapse className="browse-collapse" toggler="types-toggler">
+                        <div className='browse-item-list'><Types /></div>
+                     </UncontrolledCollapse>
+                  </NavItem>
+                  <NavItem>
+                     <Button id="media-toggler" onClick={() => this.toggleButton("medium")}>Medium <span className={this.getClassName("medium")}>›</span></Button>
+                     <UncontrolledCollapse className="browse-collapse" toggler="media-toggler">
+                        <div className='browse-item-list'><Media /></div>
+                     </UncontrolledCollapse>
+                  </NavItem>
+               </Nav>
             </Navbar>
             <img src={require('../..//static/assets/ArtCollectionHeader.png')} alt="ArtCollection Header" />
          </div>

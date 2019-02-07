@@ -37,14 +37,14 @@ const sanitize = (input) => {
 }
 
 module.exports = () => {
-  
+	const CA_HOSTNAME = process.env.CA_HOSTNAME
   const docs = readFile('ca_docs.json')
   for (let i = 0; i < docs.length; i++) {
     const doc = docs[i]
     if ('idno' in doc && (doc['status'] === "new" || doc['status'] === "completed")) {
       const originalUrl = doc['ca_object_representations.media.original'].replace(/<img src='(.+)' width='\d+' height='\d+'.*/g,"$1")
-      const original = doc['ca_object_representations.media.original'].replace(/<img src='http:\/\/artcollection.calpoly.edu\/media\/collectiveaccess\/images\/\d\/(.+)' width='\d+' height='\d+'.*/g,"$1")
-      // download(originalUrl, original)
+      const original = doc['ca_object_representations.media.original'].replace(/<img src='https:\/\/collectiveaccess.lib.calpoly.edu\/media\/collectiveaccess\/images\/\d\/(.+)' width='\d+' height='\d+'.*/g,"$1")
+      download(originalUrl, original)
       let page = {
         path: `/catalog/${doc['idno']}/`,
         id: doc['idno'],
@@ -53,12 +53,12 @@ module.exports = () => {
         artist: doc['ca_entities.related'],
         type: doc['type_id'],
         medium: doc['ca_objects.work_medium'],
+        credit: doc['ca_object_representations.credit_line'],
         figure: [
           {
             id: original.replace(/\.\w+$/, ''),
             file: `./${original}`,
-            caption: doc['ca_objects.work_description'].substring(0, 32),
-            credit: doc['ca_object_representations.credit_line']
+            caption: doc['ca_objects.work_description'].substring(0, 32)
           }
         ]
       }
@@ -70,11 +70,11 @@ collection: ${sanitize(page.collection)}
 artist: ${sanitize(page.artist)}
 type: ${page.type}
 medium: ${page.medium}
+credit: "${page.credit}"
 figure:
   - id: ${page.figure[0].id}
     file: "${page.figure[0].file}"
     caption: ${sanitize(page.figure[0].caption)}
-    credit: ${sanitize(page.figure[0].credit)}
 `
       let content = `---\n${frontmatter}---\n${doc['ca_objects.work_description']}\n`
       const fileName = `${doc['idno']}.md`

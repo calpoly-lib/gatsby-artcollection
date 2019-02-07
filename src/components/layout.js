@@ -39,11 +39,11 @@ const Layout = ({ children, data }) => (
             </Col>
           </Row>
           <Row>
-            <Col xs="3">
-              <BrowseSide />
-            </Col>
-            <Col>
+            <Col sm={{size: 9, order: 2}}>
               {children}
+            </Col>
+            <Col sm={{size: 3, order: 1}}>
+              <BrowseSide />
             </Col>
           </Row>
           <Row>
