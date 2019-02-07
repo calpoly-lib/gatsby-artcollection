@@ -13,7 +13,7 @@ export default ({ data }) => {
       id: figure.id,
       fluid: figure.file.childImageSharp.fluid,
       altText: figure.caption,
-      captionText: figure.caption,
+      captionText: '',
       captionHeader: '',
       url: figure.file.publicURL
     }
