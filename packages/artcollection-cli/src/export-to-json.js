@@ -18,6 +18,18 @@ const sanitize = (type, input) => {
 		} else {
 			return input
 		}
+	} else if (type == "artist") {
+		if (input === undefined) {
+			return "No artist listed";
+		} else {
+			return input;
+		}
+	} else if (type == "medium") {
+		if (input === undefined) {
+			return "No medium specified";
+		} else {
+			return input;
+		}
 	}
 }
 
@@ -193,6 +205,8 @@ module.exports = async () => {
 				data['ca_object_representations.media.thumbnail'] = sanitize("url", data['ca_object_representations.media.thumbnail'])
 				data['ca_object_representations.media.preview170'] = sanitize("url", data['ca_object_representations.media.preview170'])
 				data['ca_object_representations.media.original'] = sanitize("url", data['ca_object_representations.media.original'])
+				data['ca_entities.related'] = sanitize("artist", data['ca_entities.related']);
+				data['ca_objects.work_medium'] = sanitize("medium", data['ca_objects.work_medium']);
 				delete data.ok
 				delete data.access
 				items.push(data)
