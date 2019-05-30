@@ -1,7 +1,7 @@
 {
   "name": "artcollection-cli",
   "description": "Artcollection command line interface",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Carl W. Hunt <cwhunt@litlog.io>",
   "bin": {
     "artcollection": "lib/artcollection.js"
