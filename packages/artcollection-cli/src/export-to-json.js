@@ -213,7 +213,7 @@ module.exports = async () => {
 				data['ca_object_representations.media.original'] = sanitize("url", data['ca_object_representations.media.original'])
 				data['ca_entities.related'] = sanitize("artist", data['ca_entities.related']);
 				data['ca_objects.work_medium'] = sanitize("medium", data['ca_objects.work_medium']);
-				data['ca_objects.type_id'] = sanitize("type", data['ca_objects.type_id']);
+				data['type_id'] = sanitize("type", data['type_id']);
 				delete data.ok
 				delete data.access
 				items.push(data)
