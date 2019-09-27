@@ -25,7 +25,7 @@ img {
 }
 a {
 	text-decoration: underline;
-	color: #035642;
+	color: #154734;
 }
 
 a:link {
@@ -33,13 +33,17 @@ a:link {
 }
 
 a:visited {
-	color:#82786F;
+	color:#54585A;
 	text-decoration:underline;
 }
 
 a:hover, a:active, a:focus {
-	color:#58a618;
+	color: #3A913F;
 	text-decoration:underline;
+}
+
+.btn-secondary {
+	background-color: #8E9089;
 }
 
 .cp-logo {
@@ -61,6 +65,8 @@ a:hover, a:active, a:focus {
 	border-left: solid #C0C0C0 2px;
 	margin-top: 3px;
 	padding-left: 20px;
+	font-family: 'Utopia', serif;
+	font-weight: bold;
 }
 
 .navbar-search {
@@ -75,6 +81,12 @@ a:hover, a:active, a:focus {
 #title {
 	width: 100%;
 	display: inline-block;
+	padding-top: 14px;
+	padding-bottom: 7px;
+}
+
+#title-navbar {
+	padding-bottom: 10px;
 }
 
 #home img {
@@ -115,6 +127,10 @@ a:hover, a:active, a:focus {
 	text-decoration: none;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+	color: white;
+}
+
 #facets img {
 	max-width: 280px;
 	width: 100%;
@@ -134,7 +150,7 @@ a:hover, a:active, a:focus {
 }
 
 .footer .navbar li a:hover {
-	background-color: #343a40;
+	background-color: #54585A;
 }
 
 .navbar-toggler {
