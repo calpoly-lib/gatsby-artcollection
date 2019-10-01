@@ -5,7 +5,7 @@
   "author": "Carl W. Hunt <cwhunt@litlog.io>",
   "dependencies": {
     "antd": "^3.8.2",
-    "bootstrap": "^4.1.3",
+    "bootstrap": "^4.3.1",
     "gatsby": "^2.0.0",
     "gatsby-image": "^2.0.0",
     "gatsby-link": "^2.0.0",
