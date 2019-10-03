@@ -8,7 +8,7 @@ import {
   NavItem } from 'reactstrap';
 
 // import Browse from './browse'
-import Search from './search'
+import Search from './search';
 
 export default class Header extends Component {
   constructor(props) {
