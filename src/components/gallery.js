@@ -53,7 +53,7 @@ class Gallery extends Component {
       return (
         <a href={item.url} target="_blank" rel="noopener noreferrer">
           <Img
-            alt={item.caption} 
+            alt={item.altText} 
             fluid={item.fluid}
           />
         </a>
@@ -62,7 +62,7 @@ class Gallery extends Component {
       return (
         <Link to={item.url}>
           <Img
-            alt={item.caption} 
+            alt={item.altText} 
             fluid={item.fluid}
           />
         </Link>
