@@ -8,7 +8,9 @@ import {
   NavItem } from 'reactstrap';
 
 // import Browse from './browse'
-import Search from './search'
+import Search from './search';
+// import Cal Poly Logo
+import cp_logo from '../../static/assets/cp_artcollection.png';
 
 export default class Header extends Component {
   constructor(props) {
@@ -29,7 +31,7 @@ export default class Header extends Component {
       <div id="title-navbar">
         <div id="title">
           <a className="cp-logo" href="https://www.calpoly.edu/">
-            <img src="/assets/cp_artcollection.png" alt="Cal Poly logo" height="25" />
+            <img src={ cp_logo } alt="Cal Poly logo" height="25" />
           </a>
           <Link to="/" className="navbar-brand">University Art Collection</Link>
         </div>
