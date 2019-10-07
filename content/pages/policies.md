@@ -7,7 +7,7 @@ title: Policies and Procedures
 
 The University Art Acquisition and Oversight Policy serves as the campus wide guiding policy for the stewardship of campus art collections and authorizes the establishment of a University standing committee, the Art Acquisition Committee (AAC).
 
-* <a href='/assets/CAP 180 University Art Aquisition Policy_Final Approved 2018-07-18.pdf' target="_blank">CAP 180</a>
+* <a href='/assets/CAP 180 University Art Acquisition Policy_Final Approved 2018-07-18.pdf' target="_blank">CAP 180</a>
 
 ## Art Acquisition Committee
 
