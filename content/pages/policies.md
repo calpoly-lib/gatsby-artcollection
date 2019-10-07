@@ -1,5 +1,6 @@
 ---
 path: policies
+date: 2019-10-07T21:46:35.130Z
 title: Policies and Procedures
 ---
 ## University Art Acquisition and Oversight Policy, CAP 180
@@ -13,7 +14,7 @@ The University Art Acquisition and Oversight Policy serves as the campus wide gu
 The Art Acquisition Committee (AAC) serves as the lead advisory group guiding the campus in the development of the University Art Collections. The AAC considers the artistic merit and adherence to the CAP 180 “University Art Acquisition and Oversight Policy” regarding artwork proposed for acquisition. The AAC recommends policy, guidelines and procedures on the oversight, use, display and other implementation of the university art collections, including collecting scope, acquisition, management and deaccession of artwork.
 
 * <a href='/assets/AAC_Function_final_2015.pdf' target="_blank">Art Acquisition Committee Function</a>
-* <a href='/assets/AAC_Procedures__final_Feb10-2015.pdf' target="_blank">Art Acquisition Committee Procedures</a>
+* <a href='/assets/AAC_Procedures__Revise_June2019.pdf' target="_blank">Art Acquisition Committee Procedures</a>
 
 <br>
 
