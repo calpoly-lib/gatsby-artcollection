@@ -36,7 +36,8 @@
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "cd packages/artcollection-cli && npm link && cd ../.. && artcollection export && artcollection create-pages && gatsby build"
+    "index": "cd packages/artcollection-cli && npm link && cd ../.. && artcollection export && artcollection create-pages && test -f ca_docs.json",
+    "deploy": "npm run index && gatsby build"
   },
   "devDependencies": {
     "gh-pages": "^1.2.0",
