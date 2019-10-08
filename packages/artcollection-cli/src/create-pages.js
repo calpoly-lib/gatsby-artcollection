@@ -1,6 +1,5 @@
 const fs = require('fs');
 const fetch = require('node-fetch');
-const path = require('path');
 
 const readFile = (fileName) => {
   const content = fs.readFileSync(fileName)
@@ -10,7 +9,7 @@ const readFile = (fileName) => {
 async function download(url, fileName) {
   const res = await fetch(url);
   await new Promise((resolve, reject) => {
-    const fileStream = fs.createWriteStream(path.resolve(`./catalog/entries/${fileName}`));
+    const fileStream = fs.createWriteStream(fileName);
     res.body.pipe(fileStream);
     res.body.on("error", (err) => {
       reject(err);
@@ -40,7 +39,7 @@ const sanitize = (input) => {
 
 module.exports = () => {
   const CA_HOSTNAME = process.env.CA_HOSTNAME
-  const path = 'ca_docs.json'
+  const path = `${process.env.PWD}/ca_docs.json`
   try {
     if (fs.existsSync(path)) {
       const docs = readFile(path)
@@ -82,7 +81,7 @@ figure:
     caption: ${sanitize(page.figure[0].caption)}
 `
           let content = `---\n${frontmatter}---\n${doc['ca_objects.work_description']}\n`
-          const fileName = path.resolve(`./catalog/entries/${doc['idno']}.md`)
+          const fileName = (`${doc['idno']}.md`)
           console.log(`${i}: ${fileName}`)
           writeFile(fileName, content)
         }
