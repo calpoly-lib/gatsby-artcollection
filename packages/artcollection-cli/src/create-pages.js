@@ -21,11 +21,7 @@ async function download(url, fileName) {
 }
 
 const writeFile = (fileName, content) => {
-	fs.writeFile(fileName, content, 'utf8', function (err) {
-		if (err) {
-			return console.log(err);
-		}
-	});
+	fs.writeFileSync(fileName, content, 'utf8');
 }
 
 const sanitize = (input) => {
