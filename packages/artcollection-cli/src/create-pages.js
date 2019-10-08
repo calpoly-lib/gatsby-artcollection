@@ -6,10 +6,10 @@ const readFile = (fileName) => {
   return JSON.parse(content)
 }
 
-async function download(url, filename) {
+async function download(url, fileName) {
   const res = await fetch(url);
   await new Promise((resolve, reject) => {
-    const fileStream = fs.createWriteStream(filename);
+    const fileStream = fs.createWriteStream(`catalog/entries/${fileName}`);
     res.body.pipe(fileStream);
     res.body.on("error", (err) => {
       reject(err);
@@ -85,7 +85,6 @@ figure:
           writeFile(fileName, content)
         }
       }
-      fs.unlinkSync(path)
     } else {
 			console.log('No input file. CollectiveAccess is not running.');
     }

@@ -36,6 +36,12 @@ const sanitize = (type, input) => {
 		} else {
 			return input;
 		}
+	} else if (type == "credit") {
+		if (input === undefined) {
+			return "Uncredited";
+		} else {
+			return input;
+		}
 	}
 }
 
@@ -214,6 +220,7 @@ module.exports = async () => {
 				data['ca_entities.related'] = sanitize("artist", data['ca_entities.related']);
 				data['ca_objects.work_medium'] = sanitize("medium", data['ca_objects.work_medium']);
 				data['type_id'] = sanitize("type", data['type_id']);
+				data['ca_object_representations.credit_line'] = sanitize("credit", data['ca_object_representations.credit_line']);
 				delete data.ok
 				delete data.access
 				items.push(data)
