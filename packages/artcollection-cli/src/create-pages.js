@@ -9,7 +9,7 @@ const readFile = (fileName) => {
 async function download(url, fileName) {
   const res = await fetch(url);
   await new Promise((resolve, reject) => {
-    const fileStream = fs.createWriteStream(fileName);
+    const fileStream = fs.createWriteStream(`${process.env.PWD}/catalog/entries/${fileName}`);
     res.body.pipe(fileStream);
     res.body.on("error", (err) => {
       reject(err);
@@ -25,7 +25,6 @@ const writeFile = (fileName, content) => {
 		if (err) {
 			return console.log(err);
 		}
-		console.log(`content written to ${fileName}`);
 	});
 }
 
@@ -81,7 +80,7 @@ figure:
     caption: ${sanitize(page.figure[0].caption)}
 `
           let content = `---\n${frontmatter}---\n${doc['ca_objects.work_description']}\n`
-          const fileName = (`${doc['idno']}.md`)
+          const fileName = (`${process.env.PWD}/catalog/entries/${doc['idno']}.md`)
           console.log(`${i}: ${fileName}`)
           writeFile(fileName, content)
         }
