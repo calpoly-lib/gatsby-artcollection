@@ -9,7 +9,7 @@ const readFile = (fileName) => {
 async function download(url, fileName) {
   const res = await fetch(url);
   await new Promise((resolve, reject) => {
-    const fileStream = fs.createWriteStream(`./catalog/entries/${fileName}`);
+    const fileStream = fs.createWriteStream(require.resolve(`./catalog/entries/${fileName}`));
     res.body.pipe(fileStream);
     res.body.on("error", (err) => {
       reject(err);
@@ -21,7 +21,7 @@ async function download(url, fileName) {
 }
 
 const writeFile = (fileName, content) => {
-	fs.writeFile(fileName, content, 'utf8', function (err) {
+	fs.writeFile(require.resolve(fileName), content, 'utf8', function (err) {
 		if (err) {
 			return console.log(err);
 		}
