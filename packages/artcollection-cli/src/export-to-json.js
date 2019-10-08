@@ -222,7 +222,7 @@ module.exports = async () => {
     writeFile('ca_docs.json', JSON.stringify(items))
 	} catch(error) {
 		if (error.code === 'ETIMEDOUT') {
-			console.log('Collective Access is not running.');
+			console.log('CollectiveAccess is not running.');
 		} else {
 			console.error('final error', error);
 		}

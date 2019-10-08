@@ -87,7 +87,7 @@ figure:
       }
       fs.unlinkSync(path)
     } else {
-			console.log('No input file. Collective Access is not running.');
+			console.log('No input file. CollectiveAccess is not running.');
     }
 	} catch(err) {
 		console.log('err', err)
