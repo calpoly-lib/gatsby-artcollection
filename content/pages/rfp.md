@@ -12,7 +12,7 @@ San Luis Obispo, California
 
  The Cal Poly Corporation is pleased to extend an invitation and request for proposals to provide a mural that presents broad themes which ​​recognizes: 
 
-1. The value and the contributions that migrant workers and farmworkers make on the Central Coast; 
+1. The value and the contributions migrant workers and farmworkers make on the Central Coast; 
 2. The agricultural bounty of the Central Coast; 
 3. Cal Poly's student [contributions](https://aeps.calpoly.edu/about/department-facilities) to the field of agriculture (such as the Strawberry Center, Cal Poly Crops, viticulture, and curriculum that exemplifies the learn-by-doing ethos).
 4. The mural should encourage student and community interaction.  
