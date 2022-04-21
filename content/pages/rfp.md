@@ -30,9 +30,9 @@ Artists who are members of underrepresented communities are strongly encouraged 
 
 **The total artist stipend is a budget of $15,000.**
 
-(On-campus housing will be provided by Cal Poly Corporation for finalists who reside outside of a 50 mile radius from San Luis Obispo, CA)
+_(On-campus housing will be provided by Cal Poly Corporation for finalists who reside outside of a 50 mile radius from San Luis Obispo, CA)_
 
-**Deadline: Monday May 16th 5:00 p.m. PDT**
+**DEADLINE: Monday May 16th 5:00 p.m. PDT**
 
  Contact: Catherine J. Trujillo • 805-756-6395 • ctrujill@calpoly.edu
 
@@ -42,7 +42,9 @@ Artists who are members of underrepresented communities are strongly encouraged 
 * Artists must demonstrate their ability to design and successfully paint an outdoor mural.
 * Artists must live within California and be able to travel to the mural location.
 
-<h4>Download the RFP Application: Via Carta Mural Project RFP (coming soon)</h4>
+**HOW TO APPLY:**
+
+**Download the RFP Application:** Via Carta Mural Project RFP (coming soon)
 
 <hr style="border: none; background: #000; height: 1px;">
 
