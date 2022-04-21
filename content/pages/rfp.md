@@ -15,7 +15,7 @@ San Luis Obispo, California
 1. The value and the contributions migrant workers and farmworkers make on the Central Coast; 
 2. The agricultural bounty of the Central Coast; 
 3. Cal Poly's student [contributions](https://aeps.calpoly.edu/about/department-facilities) to the field of agriculture (such as the Strawberry Center, Cal Poly Crops, viticulture, and curriculum that exemplifies the learn-by-doing ethos).
-4. The mural should encourage student and community interaction.  
+4. Encourage student and community interaction.  
 
 The goals of this mural project are:
 
