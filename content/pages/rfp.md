@@ -44,7 +44,7 @@ _(On-campus housing will be provided by Cal Poly Corporation for finalists who r
 
 **HOW TO APPLY:**
 
-**Download the RFP Application:** Via Carta Mural Project RFP\
+**Download the RFP:** Via Carta Mural Project RFP\
 **Use the application template to submit your proposal: **"Attachment A: Application Template"\
 **See an example of contract: **Attachment C Professional Services Agreement”
 
