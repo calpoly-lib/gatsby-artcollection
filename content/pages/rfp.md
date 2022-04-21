@@ -42,7 +42,7 @@ Artists who are members of underrepresented communities are strongly encouraged 
 * Artists must demonstrate their ability to design and successfully paint an outdoor mural.
 * Artists must live within California and be able to travel to the mural location.
 
-<h4>**Download the RFP Application:</h4> **Via Carta Mural Project RFP (coming soon)
+<h4>Download the RFP Application: Via Carta Mural Project RFP (coming soon)</h4>
 
 <hr style="border: none; background: #000; height: 1px;">
 
