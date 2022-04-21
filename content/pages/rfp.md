@@ -42,7 +42,7 @@ Artists who are members of underrepresented communities are strongly encouraged 
 * Artists must demonstrate their ability to design and successfully paint an outdoor mural.
 * Artists must live within California and be able to travel to the mural location.
 
-**Download the RFP Application: **Via Carta Mural Project RFP (coming soon)
+<h4>**Download the RFP Application:</h4> **Via Carta Mural Project RFP (coming soon)
 
 <hr style="border: none; background: #000; height: 1px;">
 
@@ -50,7 +50,7 @@ Artists who are members of underrepresented communities are strongly encouraged 
 
 <h4><i>Warren J. Baker Center for Science and Mathematics Mural Project</i></h4>
 
-_This project is closed and no longer accepting RFPs. _
+<i>_This project is closed and no longer accepting RFPs.</i> _
 
 <p>With support from the College of Science and Mathematics and in collaboration with Cal Poly’s Cultural Faculty Staff Associations, we are pleased to extend an invitation and request for proposals to provide artwork honoring and <b>embracing diversity and inclusivity</b>. An artist (or team of artists) will be selected to create an indoor mural for installation on the second-floor lobby entry wall of the Baker Center. </p>
 
