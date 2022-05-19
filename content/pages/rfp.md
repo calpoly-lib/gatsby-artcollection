@@ -3,12 +3,16 @@ path: rfp
 date: 2018-08-22T22:18:54.724Z
 title: University Public Art RFP Opportunities
 ---
+# Archived/Closed RFPs:
+
 <p>April 22, 2022</p>
 
-**Request for Proposals: Via Carta Mural Project**
+_**Via Carta Mural Project**_
 
 California Polytechnic State University\
 San Luis Obispo, California
+
+**_This project is closed and no longer accepting RFPs._**
 
  The Cal Poly Corporation is pleased to extend an invitation and request for proposals to provide a mural that presents broad themes which ​​recognizes: 
 
@@ -24,42 +28,16 @@ The goals of this mural project are:
 * Create a mural that is colorful and inspiring for the Cal Poly community and visitors
 * Create a mural that is reflective of the learn-by-doing campus standard
 
-An artist will be selected to create an outdoor 2-dimensional mural for installation on Via Carta, building 24 at Cal Poly San Luis Obispo, California. 
+**DEADLINE HAS PASSED: Monday May 16th, 2022 5:00 p.m. PDT**
 
-Artists who are members of underrepresented communities are strongly encouraged to apply. 
-
-**The total artist stipend is a budget of $15,000.**
-
-_(On-campus housing will be provided by Cal Poly Corporation for finalists who reside outside of a 50 mile radius from San Luis Obispo, CA)_
-
-**DEADLINE: Monday May 16th 5:00 p.m. PDT**
-
- Contact: Catherine J. Trujillo • 805-756-6395 • ctrujill@calpoly.edu
-
-**Artist Qualifications**
-
-* Artists must be 18 years of age or older to be eligible to apply.
-* Artists must demonstrate their ability to design and successfully paint an outdoor mural.
-* Artists must live within California and be able to travel to the mural location.
-
-**HOW TO APPLY:**
-
-**Download the RFP:**
+**Link to the RFP:**
 <a href="/assets/ViaCarta_Mural_RFP_2022.pdf">Via Carta Mural Project RFP</a>
-
-**Use the application template to submit your proposal:**
-<a href="/assets/Attachment A Application Package Template.pdf">Attachment A Application Package</a>
-
-**See an example of contract:** 
-<a href="/assets/Attachment C Professional Services Agreement.pdf">Attachment C Professional Services Agreement</a>
-
-<hr style="border: none; background: #000; height: 1px;">
 
 <h4>Archived/Closed RFPs:</h4>
 
 <h4><i>Warren J. Baker Center for Science and Mathematics Mural Project</i></h4>
 
-<i>_This project is closed and no longer accepting RFPs.</i> _
+**<i>_This project is closed and no longer accepting RFPs.</i> _**
 
 <p>With support from the College of Science and Mathematics and in collaboration with Cal Poly’s Cultural Faculty Staff Associations, we are pleased to extend an invitation and request for proposals to provide artwork honoring and <b>embracing diversity and inclusivity</b>. An artist (or team of artists) will be selected to create an indoor mural for installation on the second-floor lobby entry wall of the Baker Center. </p>
 
