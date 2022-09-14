@@ -6,10 +6,14 @@ const sanitize = (type, input) => {
 		return input
 	}
 	else if (type == "date") {
-		if (input == "created") {
-			return "n.d."
+		if (input) {
+			if (input == "created") {
+				return "n.d."
+			} else {
+				return input.replace(";created", "")
+			}
 		} else {
-			return input.replace(";created", "")
+			return input
 		}
 	}
 	else if (type == "lcsh") {
