@@ -33,8 +33,6 @@ The goals of this mural project are:
 **Link to the RFP:**
 <a href="/assets/ViaCarta_Mural_RFP_2022.pdf">Via Carta Mural Project RFP</a>
 
-<h4>Archived/Closed RFPs:</h4>
-
 <h4><i>Warren J. Baker Center for Science and Mathematics Mural Project</i></h4>
 
 **<i>_This project is closed and no longer accepting RFPs.</i> _**

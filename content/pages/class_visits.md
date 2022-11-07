@@ -8,6 +8,4 @@ Cal Poly’s university art collection serves as an invaluable resource for teac
 
 For more information and to schedule a visit, please contact:
 <br />
-<b>Catherine J. Trujillo</b>, Curator<br />
-<a href='mailto:lib-artcollection@calpoly.edu'>lib-artcollection@calpoly.edu</a><br />
-(805) 756-6395
+<a href='mailto:lib-artcollection@calpoly.edu'>lib-artcollection@calpoly.edu</a>

@@ -21,9 +21,6 @@ export default () => (
         <NavItem>
           <a className="nav-link py-1" href="mailto:lib-artcollection@calpoly.edu">lib-artcollection@calpoly.edu</a>
         </NavItem>
-        <NavItem>
-          <a className="nav-link py-1" href="tel:1-805-756-6395">(805) 756-6395</a>
-        </NavItem>
       </Nav>
       <Nav className="small flex-column flex-fill">
       </Nav>

@@ -49,6 +49,4 @@ The public frontend web-based catalog <a href='http://artcollection.calpoly.edu/
 
 For questions and helpful conversations about your proposal please contact:
 <br />
-<b>Catherine J. Trujillo</b>, Curator<br />
-<a href='mailto:lib-artcollection@calpoly.edu'>lib-artcollection@calpoly.edu</a><br />
-(805) 756-6395
+<a href='mailto:lib-artcollection@calpoly.edu'>lib-artcollection@calpoly.edu</a>
