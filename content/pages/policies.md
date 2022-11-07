@@ -20,7 +20,7 @@ The Art Acquisition Committee (AAC) serves as the lead advisory group guiding th
 
 ## How to propose an acquisition
 
-Artwork that is acquired for the campus, whether donated or purchased, is reviewed prior to acquisition or commission.  The review process—depending on the nature of the acquisition, includes <a href='http://giving.calpoly.edu/inkind.html'>University Advancement</a>, Facilities, the Art Acquisition Committee and other committees such as the Campus Landscape Committee, and the Campus Planning Committee.
+Artwork that is acquired for the campus, whether donated or purchased, is reviewed prior to acquisition or commission.  The review process—depending on the nature of the acquisition, includes University Advancement, Facilities, the Art Acquisition Committee and other committees such as the Campus Landscape Committee, and the Campus Planning Committee.
 
 The first step in proposing an acquisition is to complete the proposal form below and email to: <mailto:lib-artcollection@calpoly.edu>
 
